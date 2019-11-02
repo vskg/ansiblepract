@@ -1,0 +1,12 @@
+---
+- hosts: webservers
+  become: yes
+  tasks:
+    - name: install webserver
+      apt:
+       name: apache2
+       state: present
+    - name: start webserver
+      sevice:
+        name: apache2
+        state: started   
