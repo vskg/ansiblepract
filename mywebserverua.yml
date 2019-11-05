@@ -4,13 +4,13 @@
   tasks:
   - name: install webserver on ubuntu16 node
     apt:
-      name: "{{ webserveronUbuntu }}"
-      state: present
+     name: "{{ webserveronUbuntu }}"
+     state: present
     when: ansible_os_family =="Debian"
 
-  - name: install webserver on amazan
+  - name: install webserver on amazon
     yum:
-      name: "{{ webserveronamazon }}"
-      state: present
+     name: "{{ webserveronamazon }}"
+     state: present
     when: ansible_os_family =="RedHat"
 
